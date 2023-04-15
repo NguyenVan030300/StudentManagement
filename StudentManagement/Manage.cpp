@@ -159,6 +159,16 @@ void Manage::recordStudentToCSV(std::string nameOffile)
 {
 	std::fstream file;
 	file.open(nameOffile, std::ios::out);
+	file << "id" << ", "
+		<< "name" << ", "
+		<< "gender" << ", "
+		<< "age" << ", "
+		<< "math" << ", "
+		<< "physic" << ", "
+		<< "chemistry" << ", "
+		<< "GPA" << ", "
+		<< "Academic_performance"
+		<< std::endl;
 	for (auto& values : this->listOfStudent) {
 		file << values.getID() << ", "
 			<< values.getName() << ", "
